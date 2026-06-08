@@ -1,0 +1,10 @@
+Class        → Blueprint
+Object       → Real instance
+Constructor  → Initializes object
+Method       → Behavior
+Encapsulation→ Hide data
+Inheritance  → Reuse code
+Overriding   → Change behavior
+Interface    → Contract
+Polymorphism → One reference, many forms
+Abstract     → Partial implementation
