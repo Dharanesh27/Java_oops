@@ -15,8 +15,8 @@ class Bike implements  Vehicle{
 }
 class Main{
     public static void main(String[] args) {
-        Vehicle b1 =new Bike();
-        b1.run();
+        Vehicle b1 =new Bike();//can use Vehicle v = new Bike();
+        b1.run();               //can use Vehicle v = new car(); only if i need to call the method that i defined in the interface;
         Vehicle c1 = new Car();
         c1.run();
     }
