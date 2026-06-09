@@ -36,7 +36,7 @@ class Library{
         books.add(b);
         System.out.println(b.getTitle() + " Added to library.");
      }
-     void issueBook(int  id){
+     void issueBook(int  id,int userId){
         for(Book b : books){
             if(b.getId() == id){
                 if(b.isAvailable()){
@@ -51,14 +51,14 @@ class Library{
             
             System.out.println("Book not found");   
         }
-        void acceptBook(int id){
+        void acceptBook(int id,int userId){
         for (Book b : books){
             if(b.getId()==id){
                 if(!b.isAvailable()){
                     b.setAvailability(true);
                     System.out.println("Book returned: " + b.getTitle());
                 }else{
-                    System.out.println("Book: " + b.getTitle() + " not issued to the user.");
+                    System.out.println("Book: " + b.getTitle() + " not issued to the user" + userId + ".");
                 }
                 return;
             }
@@ -83,11 +83,11 @@ class User{
 
     void borrowBook(Library lib,int bookId){
         System.out.println("User:  "+ userId +" borrowing the book.");
-        lib.issueBook(bookId);
+        lib.issueBook(bookId,userId);
     }
     void returnBook(Library lib,int bookId){
         System.out.println("User: " + userId + " returning book.");
-        lib.acceptBook(bookId);
+        lib.acceptBook(bookId,userId);
     }
 }
 class Main{
